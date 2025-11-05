@@ -1,8 +1,11 @@
 @import "tailwindcss";
 
 :root {
-  --background: #2e2c9a;
+  --background: #0B0524;
   --foreground: #171717;
+  --primary: #030712;
+  --text-primary: #F9FAFB;
+  --text-background: #030712;
   --font-italianno: 'Italianno', cursive;
   --font-eczar: 'Eczar', serif;
 }

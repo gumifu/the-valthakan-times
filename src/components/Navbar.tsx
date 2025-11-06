@@ -9,6 +9,7 @@ export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
+    <>
     <nav className="fixed top-0 left-0 w-full z-50 bg-white/70 backdrop-blur-md border-b border-gray-100">
       <div className="flex items-center justify-between px-4 py-3 md:px-8">
         {/* logo */}
@@ -16,7 +17,7 @@ export default function Navbar() {
           MyLogo
         </Link>
 
-        {/* Hamburger Meniu (Mobile) */}
+        {/* Hamburger Menu (Mobile) */}
         <button
           onClick={() => setIsOpen(!isOpen)}
           className="md:hidden p-2 rounded-md hover:bg-gray-100 transition"
@@ -33,45 +34,53 @@ export default function Navbar() {
           ))}
         </div>
       </div>
+    </nav>
 
       <AnimatePresence>
         {isOpen && (
           <motion.div
-            initial={{ opacity: 0, y: "-100%" }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: "-100%" }}
-            transition={{ duration: 0.4 }}
-            className="fixed inset-0 bg-white flex flex-col p-6 md:hidden"
+            initial={{ opacity: 0, height: 0 }}
+            animate={{ opacity: 1, height: "calc(100vh - 60px)" }}
+            exit={{ opacity: 0, height: 0 }}
+            transition={{ duration: 0.3 }}
+            className="fixed top-[60px] left-0 right-0 bg-white z-[100] md:hidden overflow-hidden"
           >
-            <div>
-              <div className="flex justify-end">
-                <button onClick={() => setIsOpen(false)}>
-                  <X size={28} />
-                </button>
-              </div>
+            <div className="h-full flex flex-col relative">
 
-              <ul className="mt-10 flex flex-col gap-6 text-gray-800 text-lg text-center font-medium">
-                {NAV_LINKS.map((link) => (
+              {/* Menu Items */}
+              <ul className="mt-10 flex flex-col gap-6 text-gray-800 text-lg text-center font-medium px-6">
+                {NAV_LINKS.filter((link) => link.name !== "Patreon" && link.name !== "Shop").map((link) => (
                   <li key={link.name}>
                     <Link href={link.href} onClick={() => setIsOpen(false)}>
                       {link.name}
                     </Link>
                   </li>
                 ))}
+                <li>
+                  {/* Patreon & Shop */}
+                  <div className="flex justify-center gap-12 mt-2">
+                    {NAV_LINKS.filter((link) => link.name === "Patreon" || link.name === "Shop").map((link) => (
+                      <Link key={link.name} href={link.href} target="_blank" rel="noopener noreferrer" onClick={() => setIsOpen(false)}>
+                        {link.name}
+                      </Link>
+                    ))}
+                  </div>
+                </li>
               </ul>
-            </div>
 
-            <div className="absolute bottom-6 left-0 w-full flex flex-col items-center gap-3 px-6">
-              <button className="w-full max-w-[400px] border border-gray-300 rounded-lg py-2 text-gray-700 font-medium">
-                Login
-              </button>
-              <button className="w-full max-w-[400px] bg-gray-700 text-white rounded-lg py-2 font-medium">
-                Get in touch →
-              </button>
+              {/* Bottom Buttons */}
+              <div className="absolute bottom-0 left-0 w-full flex flex-col items-center gap-3 px-6 pb-6">
+                <button className="w-full max-w-[400px] border border-gray-300 rounded-lg py-3 text-gray-700 font-medium">
+                  Login
+                </button>
+                <button className="w-full max-w-[400px] bg-gray-700 text-white rounded-lg py-3 font-medium">
+                  Get in touch →
+                </button>
+              </div>
             </div>
           </motion.div>
         )}
       </AnimatePresence>
-    </nav>
+      </>
   );
 }

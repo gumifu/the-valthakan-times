@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Italianno, Eczar } from "next/font/google";
+import { Italianno, Eczar, Inter } from "next/font/google";
 import "./globals.css";
 
 const italianno = Italianno({
@@ -10,7 +10,14 @@ const italianno = Italianno({
 
 const eczar = Eczar({
   subsets: ["latin"],
+  weight: ["400", "600"],
   variable: "--font-eczar",
+});
+
+const inter = Inter({
+  subsets: ["latin"],
+  weight: ["400", "500", "600"],
+  variable: "--font-inter",
 });
 
 export const metadata: Metadata = {
@@ -26,7 +33,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${italianno.variable} ${eczar.variable} antialiased`}
+        className={`${italianno.variable} ${eczar.variable} ${inter.variable} antialiased`}
       >
         {children}
       </body>

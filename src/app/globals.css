@@ -11,7 +11,7 @@
 
   /* Figma Design Variables - Colors */
   --color-palette-white: #FFFFFF;
-  
+
   /* Blue Gray Palette */
   --color-blue-gray-50: #F8FAFC;
   --color-blue-gray-100: #F1F5F9;
@@ -23,7 +23,7 @@
   --color-blue-gray-700: #334155;
   --color-blue-gray-800: #1E293B;
   --color-blue-gray-900: #0C0922;
-  
+
   /* Indigo Palette */
   --color-indigo-50: #EEF2FF;
   --color-indigo-100: #E0E7FF;
@@ -35,7 +35,7 @@
   --color-indigo-700: #4338CA;
   --color-indigo-800: #3730A3;
   --color-indigo-900: #312E81;
-  
+
   /* Yellow Palette */
   --color-yellow-50: #FFFBEB;
   --color-yellow-100: #FEF3C7;
@@ -47,7 +47,7 @@
   --color-yellow-700: #B45309;
   --color-yellow-800: #92400E;
   --color-yellow-900: #78350F;
-  
+
   /* Red Palette */
   --color-red-50: #FEF2F2;
   --color-red-100: #FEE2E2;
@@ -59,7 +59,7 @@
   --color-red-700: #B91C1C;
   --color-red-800: #991B1B;
   --color-red-900: #7F1D1D;
-  
+
   /* Green Palette */
   --color-green-50: #ECFDF5;
   --color-green-100: #D1FAE5;
@@ -71,7 +71,7 @@
   --color-green-700: #047857;
   --color-green-800: #065F46;
   --color-green-900: #064E3B;
-  
+
   /* Blue Palette */
   --color-blue-50: #EFF6FF;
   --color-blue-100: #DBEAFE;
@@ -83,7 +83,7 @@
   --color-blue-700: #1D4ED8;
   --color-blue-800: #1E40AF;
   --color-blue-900: #1E3A8A;
-  
+
   /* Pink Palette */
   --color-pink-50: #FDF2F8;
   --color-pink-100: #FCE7F3;
@@ -95,7 +95,7 @@
   --color-pink-700: #BE185D;
   --color-pink-800: #9D174D;
   --color-pink-900: #831843;
-  
+
   /* Purple Palette */
   --color-purple-50: #F5F3FF;
   --color-purple-100: #EDE9FE;
@@ -107,13 +107,13 @@
   --color-purple-700: #6D28D9;
   --color-purple-800: #5B21B6;
   --color-purple-900: #4C1D95;
-  
+
   /* Figma Design Variables - Fonts */
   --font-inter: 'Inter', sans-serif;
-  
+
   /* Figma Design Variables - Shadows */
   --shadow-yellow: 0px 0px 20px 0px rgba(248, 198, 48, 0.4);
-  
+
   /* Figma Design Variables - Spacing */
   --spacing-0: 0;
   --spacing-1-5: 6px;
@@ -121,7 +121,7 @@
   --spacing-4: 16px;
   --spacing-5: 20px;
   --spacing-10: 40px;
-  
+
   /* Figma Design Variables - Border Radius */
   --border-radius-base: 12px;
 }
@@ -133,7 +133,7 @@
 
   /* Figma Common Styles - Colors */
   --color-white: var(--color-palette-white);
-  
+
   /* Blue Gray Colors */
   --color-blue-gray-50: var(--color-blue-gray-50);
   --color-blue-gray-100: var(--color-blue-gray-100);
@@ -145,7 +145,7 @@
   --color-blue-gray-700: var(--color-blue-gray-700);
   --color-blue-gray-800: var(--color-blue-gray-800);
   --color-blue-gray-900: var(--color-blue-gray-900);
-  
+
   /* Indigo Colors */
   --color-indigo-50: var(--color-indigo-50);
   --color-indigo-100: var(--color-indigo-100);
@@ -157,7 +157,7 @@
   --color-indigo-700: var(--color-indigo-700);
   --color-indigo-800: var(--color-indigo-800);
   --color-indigo-900: var(--color-indigo-900);
-  
+
   /* Yellow Colors */
   --color-yellow-50: var(--color-yellow-50);
   --color-yellow-100: var(--color-yellow-100);
@@ -169,7 +169,7 @@
   --color-yellow-700: var(--color-yellow-700);
   --color-yellow-800: var(--color-yellow-800);
   --color-yellow-900: var(--color-yellow-900);
-  
+
   /* Red Colors */
   --color-red-50: var(--color-red-50);
   --color-red-100: var(--color-red-100);
@@ -181,7 +181,7 @@
   --color-red-700: var(--color-red-700);
   --color-red-800: var(--color-red-800);
   --color-red-900: var(--color-red-900);
-  
+
   /* Green Colors */
   --color-green-50: var(--color-green-50);
   --color-green-100: var(--color-green-100);
@@ -193,7 +193,7 @@
   --color-green-700: var(--color-green-700);
   --color-green-800: var(--color-green-800);
   --color-green-900: var(--color-green-900);
-  
+
   /* Blue Colors */
   --color-blue-50: var(--color-blue-50);
   --color-blue-100: var(--color-blue-100);
@@ -205,7 +205,7 @@
   --color-blue-700: var(--color-blue-700);
   --color-blue-800: var(--color-blue-800);
   --color-blue-900: var(--color-blue-900);
-  
+
   /* Pink Colors */
   --color-pink-50: var(--color-pink-50);
   --color-pink-100: var(--color-pink-100);
@@ -217,7 +217,7 @@
   --color-pink-700: var(--color-pink-700);
   --color-pink-800: var(--color-pink-800);
   --color-pink-900: var(--color-pink-900);
-  
+
   /* Purple Colors */
   --color-purple-50: var(--color-purple-50);
   --color-purple-100: var(--color-purple-100);
@@ -235,7 +235,7 @@
 
   /* Figma Common Styles - Shadows */
   --shadow-yellow: var(--shadow-yellow);
-  
+
   /* Figma Common Styles - Spacing */
   --spacing-0: var(--spacing-0);
   --spacing-1-5: var(--spacing-1-5);
@@ -243,7 +243,7 @@
   --spacing-4: var(--spacing-4);
   --spacing-5: var(--spacing-5);
   --spacing-10: var(--spacing-10);
-  
+
   /* Figma Common Styles - Border Radius */
   --radius-base: var(--border-radius-base);
 }

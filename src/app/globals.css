@@ -8,12 +8,29 @@
   --text-background: #030712;
   --font-italianno: 'Italianno', cursive;
   --font-eczar: 'Eczar', serif;
+  
+  /* Figma Design Variables */
+  --color-palette-white: #FFFFFF;
+  --font-inter: 'Inter', sans-serif;
+  --text-base-size: 16px;
+  --text-base-weight: 500;
+  --text-base-line-height: 24px;
+  --shadow-yellow: 0px 0px 20px 0px rgba(248, 198, 48, 0.4);
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --font-sans: Helvetica, Arial, sans-serif;
+  
+  /* Figma Common Styles - Colors */
+  --color-white: var(--color-palette-white);
+  
+  /* Figma Common Styles - Fonts */
+  --font-inter: var(--font-inter);
+  
+  /* Figma Common Styles - Shadows */
+  --shadow-yellow: var(--shadow-yellow);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -33,4 +50,16 @@ body {
 h1, h2, h3, header, .header-title {
   font-family: var(--font-italianno), cursive;
   font-weight: 400;
+}
+
+/* Figma Common Styles - Utility Classes */
+.text-base-figma {
+  font-family: var(--font-inter), sans-serif;
+  font-size: var(--text-base-size);
+  font-weight: var(--text-base-weight);
+  line-height: var(--text-base-line-height);
+}
+
+.shadow-yellow {
+  box-shadow: var(--shadow-yellow);
 }

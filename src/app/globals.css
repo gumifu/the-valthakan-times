@@ -408,3 +408,7 @@ h1, h2, h3, header, .header-title {
 .rounded-base {
   border-radius: var(--border-radius-base);
 }
+
+/* Hide horizontal scrollbar on the carousel track */
+.scrollbar-hide::-webkit-scrollbar { display: none; }
+.scrollbar-hide { -ms-overflow-style: none; scrollbar-width: none; }

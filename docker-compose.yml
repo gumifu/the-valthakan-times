@@ -1,0 +1,18 @@
+services:
+  web:
+    image: node:20-alpine
+    working_dir: /app
+    ports:
+      - "3000:3000"
+    volumes:
+      - .:/app                 # Bind local code to the container → changes are reflected instantly
+      - /app/node_modules      # Keep node_modules inside the container (prevents OS conflicts)
+    environment:
+      - NODE_ENV=development
+      - NEXT_TELEMETRY_DISABLED=1
+      # Improves file change detection (especially useful on WSL/Docker environments)
+      - CHOKIDAR_USEPOLLING=true
+      - WATCHPACK_POLLING=true
+    command: >
+      sh -c "npm ci && npm run dev -- -p 3000 --hostname 0.0.0.0"
+      # Run clean install, then start Next.js dev server on port 3000, accessible from outside

@@ -46,7 +46,7 @@ const MOCK_ITEMS: EditionCardItem[] = Array.from({ length: 5 }).map((_, i) => {
  */
 export async function fetchLatestEditions(limit = 5): Promise<EditionCardItem[]> {
   const key = process.env.BEEHIIV_API_KEY || "";
-  const rawPub = "pub_" + process.env.BEEHIIV_PUBLICATION_ID || "";
+  const rawPub = process.env.BEEHIIV_PUBLICATION_ID || "";
   const useMock = process.env.USE_MOCK_DATA === "true";
 
   // If explicitly using mock OR missing credentials → return mock

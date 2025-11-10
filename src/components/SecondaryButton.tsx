@@ -17,9 +17,10 @@ export const SecondaryButton = ({
         text-[color:var(--color-blue-gray-900)]
         px-[var(--spacing-4)] py-[var(--spacing-2-5)]
         gap-[var(--spacing-1-5)]
+        shadow-yellowglow  
+        transition-shadow duration-300
         ${className}
       `}
-      style={{ boxShadow: "0 0 20px var(--color-yellow-400)" }}
     >
       {showLeftIcon && <ArrowLeft className="w-4 h-4" />}
       <span>{text}</span>

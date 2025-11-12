@@ -124,6 +124,12 @@
 
   /* Figma Design Variables - Border Radius */
   --border-radius-base: 12px;
+
+  /* shadow */
+  --shadow-purple-glow: 0 0 40px rgba(147, 112, 219, 0.5);
+  --text-shadow-purple: 0 0 40px rgba(147, 112, 219, 0.5);
+  --shadow-indigo: 0 0 20px rgba(67, 56, 202, 0.5);
+  --text-shadow-indigo: 0 0 20px rgba(67,56,202,.5);
 }
 
 @theme inline {
@@ -402,6 +408,10 @@ h1, h2, h3, header, .header-title {
 /* Shadows */
 .shadow-yellow {
   box-shadow: var(--shadow-yellow);
+}
+
+.shadow-indigo {
+  box-shadow: var(--shadow-indigo);
 }
 
 /* Border Radius */

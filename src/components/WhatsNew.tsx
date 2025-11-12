@@ -1,20 +1,27 @@
 import ServiceCard from "./ServiceCard";
+import Image from "next/image";
 
 export default async function WhatsNew(){
     return(
       <section
         id="Hey Crone What's New?"
         className="
-        w-full min-h-screen py-20
-        flex flex-col justify-center items-center gap-8"
-      >
-        <h1 className="text-center text-white text-7xl font-['Italianno'] leading-[68px] [text-shadow:_0px_0px_40px_rgb(147_112_219_/_0.50)]">
-          Hey Crone, What's New?
+            relative isolate
+            w-full min-h-screen py-20
+            flex flex-col justify-center items-center gap-8
+            text-white"
+        >
+        <div
+            className="
+            absolute inset-0 -z-10 pointer-events-none
+            opacity-20
+            bg-[linear-gradient(180deg,_var(--color-blue-gray-900)_0%,_var(--color-blue-gray-900)_28%,_var(--color-indigo-700)_50%,_var(--color-blue-gray-900)_100%)]
+            "
+        />
+
+        <h1 className="text-center heading-sp-h1 text-white [text-shadow:var(--text-shadow-purple)]">
+          Hey Crone,<span className="block md:inline"> What's New?</span>
         </h1>
-      
-        <div className="self-stretch text-center justify-center [color:var(--color-blue-gray-400)] text-base font-normal font-['Eczar'] leading-6">
-          Join our vibrant community for weekly content, honest lifestyle advice, and unique perspectives on
-        </div>
       
         {/* Responsive card container */}
         <div

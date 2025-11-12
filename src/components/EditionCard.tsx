@@ -16,7 +16,7 @@ type EditionCardProps = {
 
 export default function EditionCard({
   href = "#",
-  imageSrc = "/card_img.jpg",
+  imageSrc = "/card_img.png",
   editionNumber,
   tag = "Monthly Edition",
   dateISO,
@@ -36,9 +36,9 @@ export default function EditionCard({
     <Link
       href={href}
       className={`
-        w-[300px] h-[400px]
-        block overflow-hidden rounded-lg border border-[color:var(--color-indigo-900)]
-        bg-[color:var(--color-deep-bg)] shadow-[0_0_20px_rgba(0,0,0,0.15)]
+        w-[300px] h-[433px]
+        block overflow-hidden rounded-[8px] border border-[1px] border-[color:var(--color-indigo-900)]/20
+        bg-[color:var(--color-deep-bg)]/50 shadow-[0_0_20px_rgba(0,0,0,0.15)] 
         ${className}
       `}
     >
@@ -50,10 +50,8 @@ export default function EditionCard({
           fill
           priority={false}
           sizes="(min-width: 768px) 768px, 100vw"
-          className="object-cover"
+          className="object-cover px-5"
         />
-        {/* overay (Figma: #201A34 78%) */}
-        <div className="absolute inset-0 bg-[#201A34]/[0.78]" />
 
         {/* edtition number */}
         <div className="absolute inset-0 flex items-center justify-center">
@@ -69,27 +67,30 @@ export default function EditionCard({
       </div>
 
       {/* text */}
-      <div className="px-6 py-6">
+      <div className="px-6 py-6 flext h-[197px] flex-col space-y-3.5">
         <div className="flex items-center justify-between text-sm text-[color:var(--color-blue-gray-300)] font-['Eczar']">
-          <span>{tag}</span>
+          <span
+            className="
+              inline-flex h-[30px] items-center rounded-full px-3
+              bg-[#9D174D]/20
+              text-[color:var(--color-pink-300)] font-medium
+            "
+          >
+            {tag}
+          </span>
           {formattedDate && (
-            <span className="flex items-center gap-2">
-              <i aria-hidden className="block h-[1px] w-8 bg-[color:var(--color-blue-gray-700)]" />
+            <span className="flex items-center">
               {formattedDate}
             </span>
           )}
         </div>
 
-        <h3
-          className="
-            mt-3 text-white heading-sp-h3-eczar leading-snug font-semibold
-          "
-        >
+        <h3 className="text-white heading-sp-h3-eczar leading-snug">
           {title}
         </h3>
 
         {subtitle && (
-          <p className="mt-2 text-[color:var(--color-blue-gray-300,_#aeb6d9)] font-['Eczar']">
+          <p className="text-[color:var(--color-blue-gray-300)] font-['Inter']">
             {subtitle}
           </p>
         )}

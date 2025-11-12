@@ -61,6 +61,7 @@ export default function EditionsCarousel({ items }: { items: Item[] }) {
         ref={trackRef}
         className="
           flex gap-6
+          h-[433px]
           overflow-x-auto scroll-smooth
           snap-x snap-mandatory
           px-5 md:px-0
@@ -78,7 +79,7 @@ export default function EditionsCarousel({ items }: { items: Item[] }) {
             }}
             className="
             snap-center flex-none
-            w-[300px] h-[400px]   /* Fixed card size */
+            w-[300px] h-[433px]   /* Fixed card size */
             "
           >
             {/* Render each edition card */}
@@ -97,7 +98,7 @@ export default function EditionsCarousel({ items }: { items: Item[] }) {
       </div>
 
       {/* ==== Pagination dots ==== */}
-      <div className="mt-4 flex items-center justify-center gap-2">
+      <div className="mt-3 flex items-center justify-center gap-2">
         {items.map((_, i) => (
           <button
             key={i}
@@ -105,7 +106,7 @@ export default function EditionsCarousel({ items }: { items: Item[] }) {
             aria-label={`Go to slide ${i + 1}`}
             className={`
               h-2 w-2 rounded-full transition-opacity
-              ${active === i ? "opacity-100 bg-white" : "opacity-40 bg-white/70"}
+              ${active === i ? "opacity-100 bg-[color:var(--color-indigo-700)]" : "opacity-40 bg-white/70"}
             `}
           />
         ))}

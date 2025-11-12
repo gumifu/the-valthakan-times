@@ -16,16 +16,23 @@ export default function ServiceCard({
   return (
     <article
       className="
+        relative isolate
         w-full
-        rounded-lg
-        overflow-hidden
-        shadow-[0_0_20px_rgba(67,56,202,0.5)]
-        outline outline-1 outline-Color-Palette-indigo-900
-        bg-gradient-to-b from-slate-900/50 to-Color-Palette-indigo-600/50
+        rounded-lg overflow-hidden
+        border border-[1px] border-[color:var(--color-indigo-900)]
+        bg-clip-padding
+        shadow-indigo
         flex flex-col items-center
       "
       aria-label={`${serviceName}: ${serviceSubtitle}`}
     >
+      <div
+        className="
+          absolute inset-0 -z-10 pointer-events-none
+          bg-[linear-gradient(180deg,_var(--color-blue-gray-900)_40%,_var(--color-indigo-600)_100%)]
+        "
+      />
+      
       {/* Background section with color overlay */}
       <div
         className="relative self-stretch h-24 rounded-t-lg bg-cover bg-center"

@@ -113,6 +113,9 @@
 
   /* Figma Design Variables - Shadows */
   --shadow-yellow: 0px 0px 20px 0px rgba(248, 198, 48, 0.4);
+  --shadow-indigo-sm: 0px 0px 20px 0px rgba(67, 56, 202, 0.3);
+  --shadow-indigo-md: 0px 0px 20px 0px rgba(67, 56, 202, 0.5);
+  --shadow-indigo-lg: 0px 0px 30px 0px rgba(67, 56, 202, 0.5);
 
   /* Figma Design Variables - Spacing */
   --spacing-0: 0;
@@ -124,6 +127,14 @@
 
   /* Figma Design Variables - Border Radius */
   --border-radius-base: 12px;
+
+  /* Container Max Widths */
+  --max-w-container-sm: 448px;
+  --max-w-container-md: 500px;
+  --max-w-container-base: 672px;
+  --max-w-container-lg: 768px;
+  --max-w-container-xl: 893px;
+  --max-w-container-2xl: 1024px;
 }
 
 @theme inline {
@@ -235,6 +246,9 @@
 
   /* Figma Common Styles - Shadows */
   --shadow-yellow: var(--shadow-yellow);
+  --shadow-indigo-sm: var(--shadow-indigo-sm);
+  --shadow-indigo-md: var(--shadow-indigo-md);
+  --shadow-indigo-lg: var(--shadow-indigo-lg);
 
   /* Figma Common Styles - Spacing */
   --spacing-0: var(--spacing-0);
@@ -246,6 +260,14 @@
 
   /* Figma Common Styles - Border Radius */
   --radius-base: var(--border-radius-base);
+
+  /* Container Max Widths */
+  --max-w-container-sm: var(--max-w-container-sm);
+  --max-w-container-md: var(--max-w-container-md);
+  --max-w-container-base: var(--max-w-container-base);
+  --max-w-container-lg: var(--max-w-container-lg);
+  --max-w-container-xl: var(--max-w-container-xl);
+  --max-w-container-2xl: var(--max-w-container-2xl);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -260,6 +282,30 @@ body {
   color: var(--foreground);
   font-family: var(--font-sans);
   font-weight: 400;
+}
+
+/* Instagram Embed Custom Styles */
+.instagram-embed-wrapper {
+  filter: brightness(0.95) contrast(1.05);
+}
+
+.instagram-embed-wrapper .instagram-media {
+  background: transparent !important;
+  border-radius: 12px !important;
+}
+
+/* Instagram embed iframe styling (when loaded) */
+.instagram-embed-wrapper iframe {
+  border-radius: 12px !important;
+  overflow: hidden;
+}
+
+/* Custom Instagram embed container styling */
+.instagram-embed-container {
+  background: rgba(18, 15, 46, 0.3);
+  border-radius: 12px;
+  padding: 8px;
+  backdrop-filter: blur(4px);
 }
 
 h1, h2, h3, header, .header-title {
@@ -407,4 +453,20 @@ h1, h2, h3, header, .header-title {
 /* Border Radius */
 .rounded-base {
   border-radius: var(--border-radius-base);
+}
+
+/* Animations */
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fade-in 0.6s ease-out;
 }

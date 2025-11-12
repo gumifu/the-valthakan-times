@@ -6,7 +6,7 @@ export default async function HomeHero() {
     return (
     <section
       id="hero"
-      className="relative flex flex-col items-center min-h-screen overflow-x-hidden items-center px-5 pt-40 pb-24"
+      className="relative flex flex-col items-center min-h-screen overflow-x-hidden items-center px-5 pt-30 pb-24"
     >
       <div
         className="

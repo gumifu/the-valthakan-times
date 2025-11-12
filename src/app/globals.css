@@ -135,6 +135,12 @@
   --max-w-container-lg: 768px;
   --max-w-container-xl: 893px;
   --max-w-container-2xl: 1024px;
+
+  /* shadow */
+  --shadow-purple-glow: 0 0 40px rgba(147, 112, 219, 0.5);
+  --text-shadow-purple: 0 0 40px rgba(147, 112, 219, 0.5);
+  --shadow-indigo: 0 0 20px rgba(67, 56, 202, 0.5);
+  --text-shadow-indigo: 0 0 20px rgba(67,56,202,.5);
 }
 
 @theme inline {
@@ -412,7 +418,7 @@ h1, h2, h3, header, .header-title {
 /* Heading Styles - SP */
 .heading-sp-h1 {
   font-family: var(--font-italianno), cursive;
-  font-size: 40px;
+  font-size: 68px;
   font-weight: 400;
   line-height: 1;
 }
@@ -450,11 +456,16 @@ h1, h2, h3, header, .header-title {
   box-shadow: var(--shadow-yellow);
 }
 
+.shadow-indigo {
+  box-shadow: var(--shadow-indigo);
+}
+
 /* Border Radius */
 .rounded-base {
   border-radius: var(--border-radius-base);
 }
 
+<<<<<<< HEAD
 /* Animations */
 @keyframes fade-in {
   from {
@@ -470,3 +481,8 @@ h1, h2, h3, header, .header-title {
 .animate-fade-in {
   animation: fade-in 0.6s ease-out;
 }
+=======
+/* Hide horizontal scrollbar on the carousel track */
+.scrollbar-hide::-webkit-scrollbar { display: none; }
+.scrollbar-hide { -ms-overflow-style: none; scrollbar-width: none; }
+>>>>>>> origin/main

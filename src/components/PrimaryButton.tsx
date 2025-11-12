@@ -12,7 +12,7 @@ export const PrimaryButton = ({
         flex items-center justify-center flex-row
         w-full h-[40px]
         rounded-[8px]
-        font-['Eczar']
+        font-['Eczar'] font-semibold
         bg-indigo-600 hover:bg-indigo-700
         shadow-indigoglow  
         text-[color:var(--color-palette-white)]

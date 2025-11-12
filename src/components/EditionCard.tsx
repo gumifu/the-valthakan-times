@@ -4,7 +4,7 @@ import Image from "next/image";
 
 type EditionCardProps = {
   href?: string;                    // detail page link
-  imageSrc?: string;                // img link ("/card_img.jpg")
+  imageSrc?: string;                // img link ("/card_img.png")
   editionNumber: number | string;   // edtition number
   tag?: string;                // category : "Monthly Edition" 
   dateISO?: string;                    // date : "2024-01-24"
@@ -79,7 +79,7 @@ export default function EditionCard({
             {tag}
           </span>
           {formattedDate && (
-            <span className="flex items-center">
+            <span className="flex items-center font-['inter']">
               {formattedDate}
             </span>
           )}

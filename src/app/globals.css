@@ -372,7 +372,7 @@ h1, h2, h3, header, .header-title {
 /* Heading Styles - SP */
 .heading-sp-h1 {
   font-family: var(--font-italianno), cursive;
-  font-size: 40px;
+  font-size: 68px;
   font-weight: 400;
   line-height: 1;
 }

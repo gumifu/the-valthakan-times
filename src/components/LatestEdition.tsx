@@ -10,7 +10,7 @@ export default async function LatestEdition() {
           w-full min-h-screen py-20
           flex flex-col justify-center items-center gap-8
         ">
-        <h1 className="text-center text-white text-7xl font-['Italianno'] leading-[68px] [text-shadow:_0px_0px_40px_rgb(147_112_219_/_0.50)]">
+        <h1 className="text-center text-white text-7xl leading-[68px] [text-shadow:_0px_0px_40px_rgb(147_112_219_/_0.50)]">
           Our Latest Edition
         </h1>
         <div className="self-stretch text-center justify-center [color:var(--color-blue-gray-400)] text-base font-normal font-['Eczar'] leading-6">

@@ -12,7 +12,7 @@ export const SecondaryButton = ({
         flex items-center justify-center flex-row
         w-full h-[40px]
         rounded-[8px]
-        font-['Eczar']
+        font-['Eczar'] font-semibold
         bg-yellow-400 hover:bg-yellow-500
         text-[color:var(--color-blue-gray-900)]
         px-[var(--spacing-4)] py-[var(--spacing-2-5)]
